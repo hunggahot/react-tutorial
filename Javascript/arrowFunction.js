@@ -1,10 +1,11 @@
+import { TYPE_LOG } from './constants.js'
 // Arrow function: viết được nó ngắn gọn hơn so với các function khác
 
-const logger = (log) => {
-    console.log(log)
+function logger(log, type = TYPE_LOG) {
+    console[type](log)
 }
 
-logger('Messi...')
+// logger('Messi...')
 
 const sum = (a, b) => a + b
 
@@ -42,7 +43,7 @@ const arrToObj = arr => {
     return result
 }
 
- // Expected results:
+// Expected results:
 /**
 const obj1 = arrToObj([
    ['name', 'Son Dang'], 
@@ -60,3 +61,5 @@ const obj2 = arrToObj([
 console.log(obj2)
 Output: { name: 'Duc Long', age: 18, address: 'Ha Noi' }
 */
+
+export default logger;
