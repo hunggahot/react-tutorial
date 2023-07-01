@@ -1,4 +1,4 @@
-// Destructuring: phân rã, lấy trực tiếp element
+// Destructuring: phân rã, lấy trực tiếp Element bên trong mà không cần đi qua Array
 
 var array = ['Javascript', 'PHP', 'Ruby']
 
