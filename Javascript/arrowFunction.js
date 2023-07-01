@@ -26,3 +26,37 @@ const course = {
 }
 
 console.log(course.getName())
+
+//-------------------------------------------------//
+
+// Cho trước mảng infoArr, hãy viết hàm arrToObj để chuyển array thành object
+
+const arrToObj = arr => {
+    const result = arr.reduce((obj, arr) => {
+        return {
+            ...obj,
+            [arr[0]]: arr[1]
+        }
+    }, {})
+
+    return result
+}
+
+ // Expected results:
+/**
+const obj1 = arrToObj([
+   ['name', 'Son Dang'], 
+   ['age', 21], 
+   ['address', 'Ha Noi']
+])
+console.log(obj1)
+Output: { name: 'Son Dang', age: 21, address: 'Ha Noi' }
+ 
+const obj2 = arrToObj([
+   ['name', 'Duc Long'], 
+   ['age', 18], 
+   ['address', 'Ha Noi']
+])
+console.log(obj2)
+Output: { name: 'Duc Long', age: 18, address: 'Ha Noi' }
+*/
