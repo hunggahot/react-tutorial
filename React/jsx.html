@@ -43,12 +43,14 @@
         </ul>
 
         const ulLi = <ul>
-            {courses.map((course) => (
-                <li>{course.name}</li>
+            {courses.map((course, index) => (
+                <li key={index}>{course.name}</li>
             ))}
         </ul>
 
         ReactDOM.createRoot(document.getElementById('root')).render(ulLi)
+
+        console.log(ulLi)
 
         // ReactDOM.createRoot(document.getElementById('root')).render(ul)
     </script>
